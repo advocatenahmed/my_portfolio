@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us â€” Naeem Ahmed</title>
+<meta name="description" content="Contact Naeem Ahmed to discuss a legal or engineering matter. Enquiries are treated as confidential and there is no charge for an initial consultation.">
+<meta name="theme-color" content="#0a1c33">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add("has-js")</script>
+</head>
+<body data-page="contact">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===================== Header ===================== -->
+<header class="site-header ">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__mark" src="assets/logo.svg" alt="" width="40" height="40">
+      <span class="brand__text">
+        <span class="brand__name">Naeem Ahmed</span>
+        <span class="brand__tag">Law &amp; Engineering</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html"">Home</a></li>
+        <li><a class="nav__link" href="about.html"">About Us</a></li>
+        <li class="nav__item--has-sub">
+          <a class="nav__link" href="legal-services.html"">Legal Services</a>
+          <div class="nav__sub">
+            <a class="nav__sub-link" href="corporate-commercial.html"">
+              Corporate &amp; Commercial
+              <span>M&amp;A, contracts, governance and dispute resolution</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav__item--has-sub">
+          <a class="nav__link" href="engineering-services.html"">Engineering Services</a>
+          <div class="nav__sub">
+            <a class="nav__sub-link" href="construction-infrastructure.html"">
+              Construction &amp; Infrastructure
+              <span>Feasibility, design review, delivery and claims</span>
+            </a>
+          </div>
+        </li>
+        <li><a class="nav__link" href="contact.html" is-current" aria-current="page>Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--primary btn--sm" href="contact.html">Request a consultation</a>
+    </div>
+
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-drawer">
+      <span></span><span></span><span></span>
+      <span class="visually-hidden">Open menu</span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop"></div>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="nav-drawer__head">
+    <span class="nav-drawer__title">Menu</span>
+    <button class="nav-drawer__close" type="button">&times;<span class="visually-hidden">Close menu</span></button>
+  </div>
+
+  <ul class="nav-drawer__list">
+    <li><a class="nav-drawer__link"" href="index.html">Home</a></li>
+    <li><a class="nav-drawer__link"" href="about.html">About Us</a></li>
+    <li>
+      <a class="nav-drawer__link"" href="legal-services.html">Legal Services</a>
+      <ul class="nav-drawer__sub">
+        <li><a" href="corporate-commercial.html">Corporate &amp; Commercial</a></li>
+      </ul>
+    </li>
+    <li>
+      <a class="nav-drawer__link"" href="engineering-services.html">Engineering Services</a>
+      <ul class="nav-drawer__sub">
+        <li><a" href="construction-infrastructure.html">Construction &amp; Infrastructure</a></li>
+      </ul>
+    </li>
+    <li><a class="nav-drawer__link" is-current" aria-current="page href="contact.html">Contact Us</a></li>
+  </ul>
+
+  <div class="nav-drawer__foot">
+    <a class="btn btn--primary" href="contact.html">Request a consultation</a>
+  </div>
+
+  <div class="nav-drawer__meta">
+    <!-- PLACEHOLDER: replace with real office details -->
+    <p>
+      <a href="tel:+10000000000">+00 (0) 000 000 0000</a><br>
+      <a href="mailto:enquiries@example.com">enquiries@example.com</a>
+    </p>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero hero--page">
+    <div class="container hero__inner">
+      <nav class="hero__crumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><span aria-current="page">Contact Us</span></li>
+        </ol>
+      </nav>
+      <div class="hero__content">
+        <p class="eyebrow">Contact</p>
+        <h1>Contact Us</h1>
+        <p class="hero__lead">
+          Send the short version of the problem. We will come back with an honest view
+          of whether we are the right firm for it &mdash; and if we are not, a
+          suggestion of who is.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="form">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ============ Form ============ -->
+        <div>
+          <div class="section__head reveal">
+            <p class="eyebrow">Make an enquiry</p>
+            <h2 class="section__title">How can we help?</h2>
+            <p class="section__lead">
+              Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span>
+              are required. Everything you send is treated as confidential.
+            </p>
+          </div>
+
+          <!-- Error summary: populated by js/main.js -->
+          <div class="form__summary" id="form-summary" role="alert" tabindex="-1">
+            <h2>There is a problem</h2>
+            <p>Please correct the following before sending your enquiry:</p>
+            <ul id="form-summary-list"></ul>
+          </div>
+
+          <form class="form" id="enquiry-form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="fullName">
+                  Full name <span class="req" aria-hidden="true">*</span>
+                </label>
+                <input class="field__control" type="text" id="fullName" name="fullName"
+                       autocomplete="name" placeholder="Jane Smith" required>
+                <p class="field__error" id="fullName-error">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                  <span>Please enter your full name (at least 2 characters).</span>
+                </p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="email">
+                  Email address <span class="req" aria-hidden="true">*</span>
+                </label>
+                <input class="field__control" type="email" id="email" name="email"
+                       autocomplete="email" placeholder="jane@company.com" required>
+                <p class="field__error" id="email-error">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                  <span>Please enter a valid email address, for example name@company.com.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="phone">
+                  Telephone <span class="field__optional">(optional)</span>
+                </label>
+                <input class="field__control" type="tel" id="phone" name="phone"
+                       autocomplete="tel" placeholder="+00 000 000 0000">
+                <p class="field__error" id="phone-error">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                  <span>Please enter a valid telephone number, or leave this blank.</span>
+                </p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="organisation">
+                  Organisation <span class="field__optional">(optional)</span>
+                </label>
+                <input class="field__control" type="text" id="organisation" name="organisation"
+                       autocomplete="organization" placeholder="Company or project name">
+              </div>
+            </div>
+
+            <div class="form__row form__row--full">
+              <div class="field">
+                <label class="field__label" for="practice">
+                  Area of interest <span class="req" aria-hidden="true">*</span>
+                </label>
+                <select class="field__control" id="practice" name="practice" required>
+                  <option value="">Please select&hellip;</option>
+                  <option>Legal Services</option>
+                  <option>Corporate &amp; Commercial</option>
+                  <option>Engineering Services</option>
+                  <option>Construction &amp; Infrastructure</option>
+                  <option>Combined legal and engineering instruction</option>
+                  <option>Something else</option>
+                </select>
+                <p class="field__error" id="practice-error">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                  <span>Please select the area your enquiry relates to.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="message">
+                Your enquiry <span class="req" aria-hidden="true">*</span>
+              </label>
+              <textarea class="field__control" id="message" name="message"
+                        placeholder="Please describe the matter, the outcome you need, and any deadline we should be aware of." required></textarea>
+              <p class="field__error" id="message-error">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                <span>Please describe your enquiry in at least 20 characters so we can route it correctly.</span>
+              </p>
+            </div>
+
+            <div class="field field--check">
+              <input type="checkbox" id="consent" name="consent" required>
+              <div class="field__check-body">
+                <label for="consent">
+                  I have read the privacy notice and I am happy for Naeem Ahmed to use
+                  these details to respond to my enquiry.
+                </label>
+                <p class="field__error" id="consent-error">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                  <span>Please confirm you have read the privacy notice.</span>
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <button class="btn btn--primary" type="submit" id="form-submit">Send enquiry</button>
+            </div>
+
+            <p class="form-note">
+              This form is a demonstration and does not transmit your details anywhere.
+              See <code>js/main.js</code> for the marked block where a real endpoint
+              should be connected.
+            </p>
+          </form>
+
+          <!-- Success state: revealed by js/main.js -->
+          <div class="form-success" id="form-success" role="status" tabindex="-1">
+            <span class="form-success__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </span>
+            <h2>Thank you &mdash; your enquiry has been received</h2>
+            <p>
+              We have logged your enquiry and will come back to you within one working
+              day. If your matter is urgent, please telephone the office directly.
+            </p>
+            <p class="form-success__ref">Reference <strong id="form-success-ref">NA-0000</strong></p>
+            <button class="btn btn--outline" type="button" id="form-again">Send another enquiry</button>
+          </div>
+        </div>
+
+        <!-- ============ Aside ============ -->
+        <aside>
+          <div class="section__head reveal">
+            <p class="eyebrow">Direct</p>
+            <h2 class="section__title">Other ways to reach us</h2>
+          </div>
+
+          <div class="stack">
+            <!-- PLACEHOLDER: replace all contact details -->
+            <div class="contact-card reveal" data-delay="1">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div>
+                <p class="contact-card__label">Telephone</p>
+                <p class="contact-card__value"><a href="tel:+10000000000">+00 (0) 000 000 0000</a></p>
+                <p class="contact-card__note">Monday to Friday, 09:00 &ndash; 17:30</p>
+              </div>
+            </div>
+
+            <div class="contact-card reveal" data-delay="2">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              </span>
+              <div>
+                <p class="contact-card__label">Email</p>
+                <p class="contact-card__value"><a href="mailto:enquiries@example.com">enquiries@example.com</a></p>
+                <p class="contact-card__note">Replies within one working day</p>
+              </div>
+            </div>
+
+            <div class="contact-card reveal" data-delay="3">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <p class="contact-card__label">Office</p>
+                <p class="contact-card__value">Street, City, Postcode</p>
+                <p class="contact-card__note">Visits by appointment</p>
+              </div>
+            </div>
+
+            <div class="contact-card reveal" data-delay="4">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <div>
+                <p class="contact-card__label">Office hours</p>
+                <p class="contact-card__value">Mon &ndash; Fri, 09:00 &ndash; 17:30</p>
+                <p class="contact-card__note">Closed on public holidays</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section__aside reveal" data-delay="5" style="margin-top:2rem">
+            <strong>Before you write</strong>
+            <p>
+              Please do not send confidential or time-critical material through the
+              form. We cannot secure an email inbox, and we will not be able to act on
+              documents received that way.
+            </p>
+            <p>
+              Telephone the office first, or post documents to the registered address.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Offices ===================== -->
+  <section class="section section--grey">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Locations</p>
+        <h2 class="section__title">Where to find us</h2>
+        <p class="section__lead">
+          PLACEHOLDER &mdash; replace with the firm's real offices, or remove this
+          section if there is only one.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="office reveal" data-delay="1">
+          <h3 class="office__city">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Head office
+          </h3>
+          <address>
+            000 Example Street<br>
+            City, Postcode<br>
+            <a href="tel:+10000000000">+00 (0) 000 000 0000</a>
+          </address>
+        </div>
+
+        <div class="office reveal" data-delay="2">
+          <h3 class="office__city">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Engineering office
+          </h3>
+          <address>
+            000 Sample Road<br>
+            City, Postcode<br>
+            <a href="tel:+10000000000">+00 (0) 000 000 0000</a>
+          </address>
+        </div>
+
+        <div class="office reveal" data-delay="3">
+          <h3 class="office__city">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Site coverage
+          </h3>
+          <address>
+            Site and asset inspections arranged across the region and further afield,
+            subject to travel time and current workload.
+          </address>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer class="site-footer">
+  <div class="container footer__top">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img class="brand__mark" src="assets/logo.svg" alt="" width="40" height="40">
+          <span class="brand__text">
+            <span class="brand__name">Naeem Ahmed</span>
+            <span class="brand__tag">Law &amp; Engineering</span>
+          </span>
+        </a>
+        <p>
+          A law and engineering consultancy advising businesses, investors and
+          developers on transactions and projects where the two disciplines meet.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer__title">Services</h2>
+        <ul class="footer__list">
+          <li><a href="legal-services.html">Legal Services</a></li>
+          <li><a href="corporate-commercial.html">Corporate &amp; Commercial</a></li>
+          <li><a href="engineering-services.html">Engineering Services</a></li>
+          <li><a href="construction-infrastructure.html">Construction &amp; Infrastructure</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer__title">Firm</h2>
+        <ul class="footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html#form">Make an enquiry</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer__title">Contact</h2>
+        <ul class="footer__list footer__contact">
+          <!-- PLACEHOLDER: replace all contact details -->
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Office address<br>Street, City, Postcode</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+10000000000">+00 (0) 000 000 0000</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+            <a href="mailto:enquiries@example.com">enquiries@example.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="footer__disclaimer">
+      Naeem Ahmed provides legal and engineering consultancy services. Nothing on this
+      website constitutes legal or engineering advice, and no client relationship is
+      created until a written engagement letter is signed. Statutory and professional
+      details shown on this site are placeholders and must be completed before
+      publication.
+    </p>
+  </div>
+
+  <div class="container footer__bottom">
+    <div class="footer__bottom-inner">
+      <p>&copy; <span data-year>2026</span> Naeem Ahmed. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="#">Privacy notice</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Complaints</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" type="button">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <span class="visually-hidden">Back to top</span>
+</button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
